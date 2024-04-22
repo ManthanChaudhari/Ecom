@@ -2,6 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 import useFetchedData from '../hook/useFetchedData';
 import Card from './Card';
+import Lottie from "lottie-react";
+import loadanimation from "../assets/Animation - 1713808954341.json"
+
 
 function FilterItem() {
     const {category} = useParams();
@@ -14,7 +17,9 @@ function FilterItem() {
        <Card key={item.id} card = {item} productImage={item.thumbnail} productTitle={item.title} price={item.price} description={item.description}/>
     ))}
    </div>
-  ) : <h1>Loading...</h1>
+  ) : <div className='w-full h-full flex justify-center items-center'>
+  <Lottie animationData={loadanimation} className=" w-10 h-40" />
+</div>
 }
 
 export default FilterItem

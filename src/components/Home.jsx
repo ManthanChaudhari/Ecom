@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 import useFetchedData from '../hook/useFetchedData';
+import Lottie from "lottie-react";
+import loadanimation from "../assets/Animation - 1713808954341.json"
+
 
 function Home() {
     const {data,loading} = useFetchedData("https://dummyjson.com/products");
@@ -10,7 +13,9 @@ function Home() {
         <Card key={item.id} card = {item} productImage={item.thumbnail} productTitle={item.title} price={item.price} description={item.description}/>
      ))}
     </div>
-  ) : <h1>Loading...</h1>
+  ) : <div className='w-full h-screen flex justify-center items-center'>
+        <Lottie animationData={loadanimation} className=" w-80 lg:w-96" />
+  </div>
 }
 
 export default Home
