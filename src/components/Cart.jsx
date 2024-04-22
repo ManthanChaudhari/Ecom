@@ -6,7 +6,7 @@ function Cart() {
   const { allCard } = useEcom();
   return (
     <div className={`py-4 ${allCard && allCard.length ? "grid gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10 gap-x-4 " : ""}`}>
-      {allCard && allCard.length ? 
+      {allCard && allCard.length>0 ? 
         allCard.map((item) => (
           <Card
             key={item.id}
