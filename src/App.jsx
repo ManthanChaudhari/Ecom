@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { EcomContextProvider, useEcom } from "./context/ecomContext";
 
 function App() {
-  const [allCard, setAllCard] = useState("");
+  const [allCard, setAllCard] = useState(null);
   const addCard = (card) => {
     setAllCard((prev) => [...prev, card]);
   };
