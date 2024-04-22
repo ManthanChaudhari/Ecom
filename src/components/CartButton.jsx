@@ -6,8 +6,8 @@ function CartButton({card}) {
   return (
     <button
       className="px-6 bg-black text-white select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3  rounded-lg shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block  bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-      type="button" onClick={() => allCard.some(item => item.id === card.id)  ? removeCard(card) : addCard(card)}>
-      {allCard.some(item => item.id === card.id) ? "Remove from Cart" : "Add to Cart" } 
+      type="button" onClick={() => allCard.indexOf(card) !== -1  ? removeCard(card) : addCard(card)}>
+      {allCard.indexOf(card) !== -1 ? "Remove from Cart" : "Add to Cart" } 
     </button>
   )
 }
