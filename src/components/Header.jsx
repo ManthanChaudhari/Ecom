@@ -11,7 +11,6 @@ function Header() {
     navigate(`filter/${e.target.innerText}`)
     setFilter(false);
   }
-  console.log(data);
   return (
     <div className='px-4 py-3 shadow-lg bg-[#1f1f1f] relative'>
       <nav className='flex justify-between'>
