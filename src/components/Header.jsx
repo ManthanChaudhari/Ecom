@@ -11,6 +11,7 @@ function Header() {
     navigate(`filter/${e.target.innerText}`)
     setFilter(false);
   }
+  console.log(data);
   return (
     <div className='px-4 py-3 shadow-lg bg-[#1f1f1f] relative'>
       <nav className='flex justify-between'>
@@ -25,7 +26,7 @@ function Header() {
       <div>
         <ul className={`shadow-lg bg-white absolute right-2 z-10 px-5 py-2 top-[90%] rounded-sm ${filter ? "inline-block" : "hidden"} select-none`}>
          {data && data.length ? data.map((category,index) => (
-           <li key={index} className='cursor-pointer active:text-[#4a4a4a] my-1' onClick={handleFilter}>{category}</li>
+           <li key={index} className='cursor-pointer active:text-[#4a4a4a] my-1' onClick={handleFilter}>{category.name}</li>
           )) : "No categories available"}
         </ul>
         </div>
