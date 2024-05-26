@@ -14,7 +14,7 @@ function Home() {
      ))}
     </div>
   ) : <div className='w-full h-screen flex justify-center items-center'>
-        <Lottie animationData={loadanimation} className=" w-80 lg:w-96" />
+        <Lottie animationData={loadanimation} className=" w-40 lg:w-40" />
   </div>
 }
 
